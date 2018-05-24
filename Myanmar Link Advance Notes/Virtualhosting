@@ -1,0 +1,48 @@
+/etc/apache2/sites-available - localhost/   (location)
+
+sudo subl 000-default.conf
+
+
+
+//////////////////////////////
+GitHUB Install and Create PHP basic
+
+
+github virsualhost (take link)
+
+sudo apt-get install git
+
+git clone https://github.com/RoverWire/virtualhost
+
+cd home/virtualhost
+
+sudo cp virtualhost.sh /usr/local/bin/virtualhost
+
+sudo chmod +x /usr/local/bin/virtualhost
+
+sudo virtualhost
+
+sudo virtualhost create phpbasic.dev ~/code/phpbasic/        phpbasic.dev in browser
+
+			(name)		(Point Dir)
+
+sudo subl ...
+
+
+
+*/*Have to go the point directory*/         {if you want to get permission directory} Use this
+sudo chmod -R a+rx funframe/
+sudo chown -R linhtetpaing9 funframe/
+
+//////////////////////////////////////////////////////
+cp - copy
+
+chmod - change mod
+
+//////////////////////////////
+
+
+
+
+
+sudo a2enmod rewrite     (on rewrite module for htacess)

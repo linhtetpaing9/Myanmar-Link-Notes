@@ -1,0 +1,32 @@
+two types of controllers
+
+Simple Controller
+
+php artisan make:controller TestController 
+
+
+Resource Controller
+
+php artisan make:controller TestController --resource
+
+
+
+4 types of Route(Must connect controller)
+
+Api   ->   
+
+channels -> trigger events
+
+ 
+console ->
+
+web -> front-end 
+
+route/web.php
+
+Route::get("hello", 'TestController@index'); connect simple controller
+
+Route::resource("another", 'AnotherController'); connect resource controller
+
+
+php artisan make:model Blog

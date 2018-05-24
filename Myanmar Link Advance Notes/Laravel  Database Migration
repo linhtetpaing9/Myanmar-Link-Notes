@@ -1,0 +1,23 @@
+Laracast
+
+Database Migration 
+
+	-Command Line
+		- generate code
+
+php artisan make:migration create_products_table --create=products        (create file)
+
+php artisan make:migration create_categories_table --create=categories
+
+(database/migration) 
+
+php artisan migrate							(Execution)
+
+php artisan migrate:rollback						(Undo)
+
+
+php artisan migrate:reset						(Delete Everything)
+
+
+
+

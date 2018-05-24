@@ -1,0 +1,15 @@
+In BlogSeeder
+
+use App\Blog;
+
+
+$faker = Faker\Factory::create();
+
+        for($i = 0; $i < 10; $i++) {
+        	Blog::create([
+        		'title'	=> $faker->realText(50),
+        		'body'	=> $faker->paragraph(),
+        		'blog_category_id'=> 3,
+        		'user_id' => 3
+        	]);
+        }

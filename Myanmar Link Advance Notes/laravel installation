@@ -1,0 +1,13 @@
+cd code
+
+composer create-project --prefer-dist laravel/laravel blog
+
+cd blog 
+
+chmod -R 777 storage/
+chmod -R 777 bootstrap/cache/
+php artisan serve
+
+cp .env.example .env
+
+php artisan key:generate

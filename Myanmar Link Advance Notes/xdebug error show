@@ -1,0 +1,23 @@
+error show
+
+
+sudo subl /etc/php/7.1/apache2/php.ini
+
+change display_error off to on
+
+///////////////////////////////////////////////
+
+xdebug 
+
+
+sudo subl /etc/php/7.1/mods-available/xdebug.ini
+write zend_extension=xdebug.so and save
+
+phpenmod xdebug
+
+sudo apt-get install php-xdebug
+
+php -v 
+
+sudo service apache2 restart
+

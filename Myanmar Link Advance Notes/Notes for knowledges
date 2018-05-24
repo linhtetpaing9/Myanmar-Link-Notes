@@ -1,0 +1,40 @@
+linode
+digitalocean
+////////////////////////////
+
+Fail2Ban
+ModSecurity
+//////////////////////////////////////
+
+ServerPort
+
+(outbound)
+80 http
+443 https normal (https no encrytion)
+21 ftp
+22 sftp  
+
+(inbound)
+3306 mysql port
+/////////////////////////////////////////
+
+NGINX =/= apache2
+
+
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+PHP installlation
+
+sudo apt-get install tasksel
+
+sudo tasksel
+
+-choose Lamp Server
+
+
+php -v
+mysql -V
+apache2 -v   versison
+
+sudo apt-get install phpmyadmin
+
+

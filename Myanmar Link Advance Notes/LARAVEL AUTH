@@ -1,0 +1,5 @@
+Create new Database for authentication
+
+php artisan make:auth
+
+php artisan migrate

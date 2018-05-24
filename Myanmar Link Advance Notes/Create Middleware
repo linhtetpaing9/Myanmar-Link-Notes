@@ -1,0 +1,40 @@
+Insert Admin user in DB
+
+
+php artisan make:seeder AdminUserSeeder     => database/seeds
+
+In AdminUserSeeder -> put admin info
+
+php artisan db:seed                         => Insert in database table
+
+
+In DatabaseSeeder.php
+
+$this->call(AdminUserSeeder::class);
+
+-----------------------------------------------------------------------------
+
+Authentication 
+
+php artisan make:middleware SuperAdminMiddleware    => app/Http/Middleware
+
+
+
+Kernel.php
+
+'superadmin' => \App\Http\Middleware\SuperAdminMiddleware::class
+
+
+In SuperAdminMiddleware.php
+
+// use Illuminate\Support\Facades\Auth; **
+
+	$users = \Auth::user();
+
+        if($users->is_admin == true)
+        {
+
+        return $next($request);
+        }
+        \Auth::logout();
+        return redirect()->route("login");

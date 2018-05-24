@@ -1,0 +1,100 @@
+php artisan serve
+
+
+Database Migration
+
+-Create Migration File
+php artisan make:migration create_blogs(file name) --create=blogs(table name)
+
+database/migrations (update)
+
+
+-Execution 
+php artisan migrate        
+
+(Created database Table)
+-----------------------------------------------------------------------------------
+
+Create Controller
+
+-controller name must be capitalized.
+
+php artisan make:controller BlogController(Controller name) {Simple Controller}
+
+php artisan make:controller BlogController(Controller name) --resource {Resource Controller}
+
+(create controller file)
+
+--------------------------------------------------------------------------------------
+
+Connect Routing and Controller
+
+4types of route api/web/console/channels
+
+- route/web.php => [ Route for Simple Controller => Route::get("test"(url), "TestController@index (function name)"); ,
+		     Route for Resource Controller => Route::resource("test"(url), "TestController");
+		   ]
+
+--------------------------------------------------------------------------------------
+
+Connect Controller and View
+
+In Controller
+
+views() => resources/views/
+
+views('blog.index') => resource/views/blog/index.blade.php
+
+views('blog.create') => resource/views/blog/create.blade.php
+
+
+--------------------------------------------------------------------------------------
+
+Create Model
+
+Model and always must be change depend on database table name[ blogs => Blog ]
+
+php artisan make:model Blog
+
+
+(To connect Model and Controller)
+
+(Put namespace in controller) 
+
+use App\Blog;
+
+
+---------------------------------------------------------------------------------------
+
+
+Connect Controller and Model(database)
+
+
+- In controller
+	
+	store(){
+			Blog::create($request->except('_token'));
+			return redirect()->route("blog{route url}.index{controller function name}");
+
+		}	
+
+- In Model
+
+	-class Blog
+		protected $fillable = ['title', 'body']; 
+
+
+
+-------------------------------------------------------------------------------------------
+
+
+
+
+
+	
+
+
+
+
+
+
